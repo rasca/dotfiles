@@ -1,0 +1,21 @@
+[user]
+	name = Iván Raskovsky
+	email = raskovsky+git@gmail.com
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = auto
+	pager = true
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = less -FRX
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[push]
+	default = simple
