@@ -93,6 +93,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = { 'mode': 'active' }
 let g:syntastic_python_flake8_args = '--ignore=E501'
 
+Bundle 'leafgarland/typescript-vim'
+
 Bundle 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
 
@@ -146,3 +148,6 @@ Bundle 'grep.vim'
 
 filetype plugin indent on " automatically detect file types
 colorscheme jellybeans
+
+set term=screen-256color
+set t_ut=
