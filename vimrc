@@ -59,6 +59,10 @@ set softtabstop=4
 set shiftwidth=4 " set the default shift width for indents
 set expandtab " make tabs into spaces (set by tabstop)
 set smarttab " smarter tab levels
+
+:autocmd Filetype typescript set softtabstop=2
+:autocmd Filetype typescript set sw=2
+:autocmd Filetype typescript set ts=2
 " "}}}
 
 " Plugins "{{{
@@ -75,9 +79,11 @@ Bundle 'wombat256.vim'
 Bundle 'altercation/vim-colors-solarized'
 
 " Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMixed'
+" let g:ctrlp_user_command = 'git ls-files --recurse-submodules'
+let g:ctrlp_working_path_mode = 'ra'
 
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
@@ -94,16 +100,21 @@ let g:syntastic_mode_map = { 'mode': 'active' }
 let g:syntastic_python_flake8_args = '--ignore=E501'
 
 Bundle 'leafgarland/typescript-vim'
+Bundle 'posva/vim-vue'
 
 Bundle 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
 
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle "SuperTab"
 
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'grep.vim'
+
+Bundle 'will133/vim-dirdiff'
+
 "
 " Try:
 " vim-indent-guides
@@ -141,7 +152,6 @@ Bundle 'grep.vim'
 " Bundle "ragtag.vim"
 " 
 " " Utility
-" Bundle "repeat.vim"
 " Bundle "file-line"
 " Bundle "Align"
 " "}}}
