@@ -63,11 +63,15 @@ set smarttab " smarter tab levels
 :autocmd Filetype typescript set softtabstop=2
 :autocmd Filetype typescript set sw=2
 :autocmd Filetype typescript set ts=2
+
+:autocmd Filetype vue set softtabstop=2
+:autocmd Filetype vue set sw=2
+:autocmd Filetype vue set ts=2
 " "}}}
 
 " Plugins "{{{
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Bundle 'gmarik/vundle'
 
@@ -101,6 +105,7 @@ let g:syntastic_python_flake8_args = '--ignore=E501'
 
 Bundle 'leafgarland/typescript-vim'
 Bundle 'posva/vim-vue'
+Bundle 'rust-lang/rust.vim'
 
 Bundle 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
@@ -156,8 +161,12 @@ Bundle 'will133/vim-dirdiff'
 " Bundle "Align"
 " "}}}
 
-filetype plugin indent on " automatically detect file types
+call vundle#end()            " required
+filetype plugin indent on    " required
 colorscheme jellybeans
 
 set term=screen-256color
 set t_ut=
+
+" OSX stuff
+set clipboard=unnamed
