@@ -81,6 +81,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'cschlueter/vim-wombat'
 Bundle 'wombat256.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'ap/vim-css-color'
 
 " Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'ctrlpvim/ctrlp.vim'
